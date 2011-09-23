@@ -17,6 +17,8 @@ README
 t/00_compile.t
 t/01_simple.t
 t/02_forked.t
+t/03_done_testing.t
+t/04_plan.t
 xt/01_podspell.t
 xt/02_pod.t
 xt/03_pod-coverage.t
