@@ -20,6 +20,8 @@ t/02_forked.t
 t/03_done_testing.t
 t/04_plan.t
 t/05_filter.t
+t/06_test_level.t
+t/fail
 xt/01_podspell.t
 xt/02_pod.t
 xt/03_pod-coverage.t
