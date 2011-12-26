@@ -6,7 +6,7 @@ use Test::More ();
 use Test::Builder ();
 use Term::ANSIColor qw(colored);
 
-our $VERSION = '0.06';
+our $VERSION = '0.07';
 
 our $BORDER_COLOR  = [qw|cyan bold|];
 our $BORDER_CHAR   = '-';
@@ -20,7 +20,7 @@ $ENV{ANSI_COLORS_DISABLED} = 1 if $^O eq 'MSWin32';
 
 sub import {
     my $class = caller(0);
-    no warnings 'redefine';
+    no warnings qw(redefine prototype);
     no strict 'refs';
     *{"$class\::subtest"} = \&subtest;
     *Test::More::subtest = \&subtest;
@@ -76,8 +76,6 @@ sub subtest {
 
     use warnings;
     use strict;
-
-    local $@;
 
     local $Test::Builder::Level = $Test::Builder::Level = 1;
     my $is_passing = eval { $test->(); 1 };
