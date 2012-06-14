@@ -6,7 +6,7 @@ use Test::More ();
 use Test::Builder ();
 use Term::ANSIColor qw(colored);
 
-our $VERSION = '0.07';
+our $VERSION = '0.08';
 
 our $BORDER_COLOR  = [qw|cyan bold|];
 our $BORDER_CHAR   = '-';
@@ -53,7 +53,7 @@ sub subtest {
 
     ## this idea from http://d.hatena.ne.jp/tokuhirom/20111017/1318831330
     if (my $filter  = $ENV{SUBTEST_FILTER}) {
-        if ($caption =~ qr{\Q$filter\E} || $in_filter) {
+        if ($caption =~ qr{$filter} || $in_filter) {
             $builder->{__in_filter__} = 1;
         }
         else {
@@ -85,9 +85,12 @@ sub subtest {
         $builder->{Skip_All} = $skip_all;
     }
     elsif ($tests && $builder->{Curr_Test} != $current_test + $tests) {
-        _diag_plan($tests, $builder->{Curr_Test}- $current_test);
+        _diag_plan($tests, $builder->{Curr_Test} - $current_test);
         $TEST_DIFF = $builder->{Curr_Test} - $current_test - $tests;
         $is_passing = $builder->is_passing(0);
+    }
+    elsif ($builder->{Curr_Test} == $current_test) {
+        $builder->croak("No tests run for subtest $caption");
     }
 
     # restore
