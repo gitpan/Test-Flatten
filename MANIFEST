@@ -23,6 +23,10 @@ t/05_filter.t
 t/06_test_level.t
 t/07_evil_local_and_eval.t
 t/08_no_tests_run.t
+t/09_skip.t
+t/10_toto.t
+t/11_dead.t
+t/dead
 t/fail
 t/nested
 t/notests
