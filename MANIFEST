@@ -5,6 +5,7 @@ META.json
 README.md
 cpanfile
 lib/Test/Flatten.pm
+minil.toml
 t/00_compile.t
 t/01_simple.t
 t/02_forked.t

@@ -4,7 +4,7 @@
       "xaicron <xaicron {at} cpan.org>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Minilla/v2.1.3",
+   "generated_by" : "Minilla/v2.2.0",
    "license" : [
       "perl_5"
    ],
@@ -51,23 +51,24 @@
    "provides" : {
       "Test::Flatten" : {
          "file" : "lib/Test/Flatten.pm",
-         "version" : "0.10"
+         "version" : "0.11"
       }
    },
    "release_status" : "stable",
    "resources" : {
       "bugtracker" : {
-         "web" : "https://git@github.com/xaicron/p5-Test-Flatten/issues"
+         "web" : "https://github.com/xaicron/p5-Test-Flatten/issues"
       },
-      "homepage" : "https://git@github.com/xaicron/p5-Test-Flatten",
+      "homepage" : "https://github.com/xaicron/p5-Test-Flatten",
       "repository" : {
-         "url" : "git://git@github.com/xaicron/p5-Test-Flatten.git",
-         "web" : "https://git@github.com/xaicron/p5-Test-Flatten"
+         "url" : "git://github.com/xaicron/p5-Test-Flatten.git",
+         "web" : "https://github.com/xaicron/p5-Test-Flatten"
       }
    },
-   "version" : "0.10",
+   "version" : "0.11",
    "x_contributors" : [
+      "xaicron <xaicron@gmail.com>",
       "Hiroyoshi Houchi <git@hixi-hyi.com>",
-      "xaicron <xaicron@gmail.com>"
+      "Hiroyoshi HOUCHI <account@hixi-hyi.com>"
    ]
 }
